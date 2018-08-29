@@ -16,5 +16,21 @@ WIN_COMBINATIONS = [
 
 
 def won?(board)
-  WIN_COMBINATIONS.include?(board)
+  
+  WIN_COMBINATIONS.each do |arr| 
+    newArr = []
+    arr.each do |subArr|
+      newArr.push(board[subArr])
+    end
+    if newArr.all? do |item| 
+      item == "X"
+      return true
+    elsif newArr.all? do |item|
+      item == "O"
+      return true
+    else
+      return false
+      
+    end
+  end      
 end
