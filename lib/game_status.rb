@@ -19,4 +19,5 @@ def won?(board)
   WIN_COMBINATIONS.find do |comb|
     board[comb[0]] == board[comb[1]] &&
     board[comb[01]] == board[comb[2]] 
+  end
 end
