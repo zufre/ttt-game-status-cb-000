@@ -25,6 +25,7 @@ def won?(board)
     if newArr.all? do |item|
       item == "X"
       return true
+    end
     elsif newArr.all? do |item|
       item == "O"
       return true
