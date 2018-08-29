@@ -16,9 +16,14 @@ WIN_COMBINATIONS = [
 
 
 def won?(board)
-  board.any?  do|item|
-    position_taken?(board, item)
+  res = false
+  for(i = 0; i<9; i++)
+    if position_taken(board, i)
+      res = true
+    end
+    res
   end
+      
   WIN_COMBINATIONS.each do |arr|
     newArr = []
     arr.each do |subArr|
