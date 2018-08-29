@@ -18,12 +18,12 @@ WIN_COMBINATIONS = [
 def won?(board)
   res = false
   for(i = 0; i<9; i++)
-    if position_taken(board, i)
+    if position_taken?(board, i)
       res = true
     end
     res
   end
-      
+
   WIN_COMBINATIONS.each do |arr|
     newArr = []
     arr.each do |subArr|
