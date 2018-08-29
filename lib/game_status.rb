@@ -17,7 +17,7 @@ WIN_COMBINATIONS = [
 
 def won?(board)
   board.each.none?  do|item|
-    !positionTaken?(board, item)
+    !position_taken?(board, item)
   end
   WIN_COMBINATIONS.each do |arr|
     newArr = []
