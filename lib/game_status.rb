@@ -16,30 +16,7 @@ WIN_COMBINATIONS = [
 
 
 def won?(board)
-  res = false
-  for(i = 0; i<9; i++)
-    if position_taken?(board, i)
-      res = true
-    end
-    res
-  end
-
-  WIN_COMBINATIONS.each do |arr|
-    newArr = []
-    arr.each do |subArr|
-      newArr.push(board[subArr])
-    end
-    if newArr.all? do |item|
-      item == "X"
-      return true
-    end
-    elsif newArr.all? do |item|
-      item == "O"
-      return true
-    end
-    else
-      return false
-
-    end
-  end
+  WIN_COMBINATIONS.find do |comb|
+    board[comb[0]] == board[comb[1]] &&
+    board[comb[01]] == board[comb[2]] 
 end
