@@ -13,3 +13,8 @@ WIN_COMBINATIONS = [
   [2,5,8],
   [0,4,8],
   [6,4,2]]
+
+
+def won?(board)
+  WIN_COMBINATIONS.include?(board)
+end
